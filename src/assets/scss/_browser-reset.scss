@@ -1,0 +1,32 @@
+// Universal Reset
+*,
+*::before,
+*::after {
+  // Positioning
+  // Display and Box Model
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // Typography
+  // Other
+}
+
+// Links
+a, ins {
+  // Positioning
+  // Display and Box Model
+  // Typography
+  text-decoration: none;
+  // Other
+}
+
+// HTML
+html {
+  // Positioning
+  // Display and Box model
+  // Typography
+  word-break: break-word;
+  // Other
+  scroll-behavior: smooth;
+}
