@@ -1,0 +1,16 @@
+@import 'variables.scss';
+@import 'browser-reset.scss';
+@import 'typography.scss';
+
+main {
+  // Positioning
+  // Display and Box Model
+  background-color: $black-10;
+  display: grid;
+  gap: $gap-width;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding: $gap-width;
+  // Typography
+  // Other
+}
