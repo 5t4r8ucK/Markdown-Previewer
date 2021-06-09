@@ -1,0 +1,134 @@
+@import 'variables.scss';
+@import 'typography.scss';
+
+section {
+  // Positioning
+  // Display and Box Model
+  background-color: $white-100;
+  border-color: $black-20;
+  border-radius: $border-radius;
+  border-style: solid;
+  border-width: $border-width;
+  // Typography
+  // Other
+
+  header {
+    // Positioning
+    // Display and Box Model
+    border-bottom: solid $black-20 $border-width;
+    padding: calc(#{$gap-width} / 2);
+    // Typography
+    // Other
+
+    p {
+      // Positioning
+      // Display and Box Model
+      // Typography
+      color: $black-70;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-align: center;
+      text-transform: uppercase;
+      // Other
+    }
+  }
+
+  menu {
+    // Positioning
+    // Display and Box Model
+    border-bottom: solid $black-20 $border-width;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+    padding: calc(#{$gap-width} / 2);
+    // Typography
+    // Other
+
+    li {
+      // Positioning
+      // Display and Box Model
+      // Typography
+      list-style-type: none;
+      // Other
+
+      // &:first-child {
+      //   button {
+      //     border-bottom-left-radius: $border-radius;
+      //     border-top-left-radius: $border-radius;
+      //   }
+      // }
+
+      // &:last-child {
+      //   button {
+      //     border-bottom-right-radius: $border-radius;
+      //     border-top-right-radius: $border-radius;
+      //   }
+      // }
+
+      button {
+        // Positioning
+        // Display and Box Model
+        align-items: center;
+        display: flex;
+        background-color: $black-10;
+        border: solid $border-width $white-100;
+        border-radius: $border-radius;
+        height: 3rem;
+        justify-content: center;
+        width: 100%;
+        // Typography
+        color: $black-70;
+        font-family: $font-family-slab-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        // Other
+
+        &:hover {
+          // Positioning
+          // Display and Box Model
+          background-color: $black-20;
+          border: solid $border-width $black-0;
+          // Typography
+          color: $black-100;
+          // Other
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  form {
+    // Positioning
+    // Display and Box Model
+    padding: calc(#{$gap-width} / 2);
+    // Typography
+    // Other
+
+    textarea {
+      // Positioning
+      // Display and Box Model
+      background-color: $black-5;
+      border-color: $black-20;
+      border-radius: $border-radius;
+      border-style: solid;
+      border-width: $border-width;
+      height: auto;
+      padding: calc(#{$gap-width} / 2);
+      resize: none;
+      min-height: 100%;
+      vertical-align: top;
+      width: 100%;
+      // Typography
+      // Other
+    }
+  }
+}
+
+#editor {
+  // Positioning
+  // Display and Box Model
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  // Typography
+  // Other
+}
