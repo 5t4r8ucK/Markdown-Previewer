@@ -1,0 +1,38 @@
+// Colors
+$black-0: rgba(0 ,0 ,0, 0);
+$black-5: rgba(0 ,0 ,0, 0.05);
+$black-10: rgba(0 ,0 ,0, 0.1);
+$black-20: rgba(0 ,0 ,0, 0.2);
+$black-40: rgba(0 ,0 ,0, 0.4);
+$black-70: rgba(0 ,0 ,0, 0.7);
+$black-100: rgba(0 ,0 ,0, 1);
+$white-0: rgba(255, 255, 255, 0);
+$white-100: rgba(255, 255, 255, 1);
+
+// Font sizes
+$minor-third: 1.200;
+$perfect-fourth: 1.333;
+$golden-ratio: 1.618;
+$min-font-size: 1rem; // 16px
+$preferred-font-size: calc((#{strip-unit($min-font-size)} / #{strip-unit(100vw)}) * 100  * 1vw); // (absoluteSize / breakpoint) * 100% * 1unit (to get units)
+$max-font-size: 0.78125vw; // (16px / 2048 * 100)
+
+// Resolutions
+$small-devices: 20rem; // 320
+$medium-devices: 48rem;// 768
+$large-devices: 62rem; // 992
+$extra-large-devices: 75rem; // 1200
+$full-hd-width: 120rem; // 1920 (Full HD)
+$two-k-width: 128rem; // 2048 x 1080 (2k)
+$four-k-devices: 240rem; // 3840 x 2160 (4k)
+
+// Measurements
+$gap-width: 1.25rem; // 20 px
+$border-width: 0.0625rem;// 1 px
+$border-radius: 0.3125rem; // 5 px
+$column-width: 7.375rem; // 118 px
+$fluid-padding: clamp(#{$gap-width}, 5%, calc(#{$column-width} + (#{$gap-width} / 2)));
+
+// Filters
+$grayscale: grayscale(100%);
+$dark-top-gradient: linear-gradient(to bottom, $black-100, $black-0);
