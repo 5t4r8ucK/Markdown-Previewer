@@ -106,6 +106,15 @@ section {
       // Typography
       font-family: $font-family-monospace;
       // Other
+
+      &:focus {
+        // Positioning
+        // Display and Box Model
+        border: solid $border-width #61DAFB;
+        outline: none;
+        // Typography
+        // Other
+      }
     }
   }
 }
