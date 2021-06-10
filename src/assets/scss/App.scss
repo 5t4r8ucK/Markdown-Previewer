@@ -98,9 +98,9 @@ section {
       border-style: solid;
       border-width: $border-width;
       height: auto;
+      min-height: 100%;
       padding: calc(#{$gap-width} / 2);
       resize: none;
-      min-height: 100%;
       vertical-align: top;
       width: 100%;
       // Typography
