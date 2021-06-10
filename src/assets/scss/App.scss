@@ -15,7 +15,7 @@ section {
   header {
     // Positioning
     // Display and Box Model
-    border-bottom: solid $black-20 $border-width;
+    background-color: $black-10;
     padding: calc(#{$gap-width} / 2);
     // Typography
     // Other
@@ -37,7 +37,7 @@ section {
   menu {
     // Positioning
     // Display and Box Model
-    border-bottom: solid $black-20 $border-width;
+    background-color: $black-5;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
     padding: calc(#{$gap-width} / 2);
@@ -57,7 +57,6 @@ section {
         align-items: center;
         display: flex;
         background-color: $black-10;
-        border: solid $border-width $white-100;
         border-radius: $border-radius;
         height: 3rem;
         justify-content: center;
@@ -73,7 +72,6 @@ section {
           // Positioning
           // Display and Box Model
           background-color: $black-20;
-          border: solid $border-width $black-0;
           // Typography
           color: $black-100;
           // Other
