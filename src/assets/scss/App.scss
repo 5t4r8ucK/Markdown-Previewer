@@ -18,14 +18,15 @@ section {
     background-color: $black-10;
     padding: calc(#{$gap-width} / 2);
     // Typography
+    font-family: $font-stack-sans-serif;
     // Other
 
-    p {
+    small {
       // Positioning
       // Display and Box Model
+      display: block;
       // Typography
       color: $black-70;
-      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-align: center;
