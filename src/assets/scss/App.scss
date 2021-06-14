@@ -65,7 +65,7 @@ section {
         width: 100%;
         // Typography
         color: $black-70;
-        font-family: $font-family-slab-serif;
+        font-family: $font-stack-slab-serif;
         font-size: 1rem;
         font-weight: 600;
         // Other
@@ -105,13 +105,13 @@ section {
       vertical-align: top;
       width: 100%;
       // Typography
-      font-family: $font-family-monospace;
+      font-family: $font-stack-monospace;
       // Other
 
       &:focus {
         // Positioning
         // Display and Box Model
-        border: solid $border-width #61DAFB;
+        border: solid $border-width $highlight-100;
         outline: none;
         // Typography
         // Other
