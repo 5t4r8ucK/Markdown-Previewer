@@ -1,104 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
+import MarkdownIt from 'markdown-it';
+import icons from './assets/data/icons.js';
+import exampleText from './assets/data/exampleText.js';
 import './assets/css/App.css';
 
-function Editor(props) {
+const TextArea = ({text, setText}) => {
+  const handleChange = (event) => setText(
+    event.target.value
+  )
   return (
-    <section id="editor">
+    <textarea
+      value={text}
+      onChange={handleChange}>
+    </textarea>
+  )
+}
+
+function Editor({icons, text, setText}) {
+  const listItems = icons.map((icon) => {
+    if (icon.name === 'fas fa-heading') {
+      return (
+        <li key={icon.id}>
+          <button>
+            <i className={icon.name}></i>{icon.id}
+          </button>
+        </li>
+      )
+    } else {
+      return (
+        <li key={icon.id}>
+          <button>
+            <i className={icon.name}></i>
+          </button>
+        </li>
+      )
+    }
+  });
+
+  return (
+    <section id='editor'>
       <header>
-        <p>Editor</p>
+        <small>Editor</small>
       </header>
       <menu>
-        <li>
-          <button>
-          <i className="fas fa-heading"></i>1
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-heading"></i>2
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-heading"></i>3
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-heading"></i>4
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-heading"></i>5
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-heading"></i>6
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-link"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-code"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-th-large"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-list"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-quote-left"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="far fa-image"></i>
-          </button>
-        </li>
-        <li>
-          <button>
-            <i className="fas fa-bold"></i>
-          </button>
-        </li>
+        {listItems}
       </menu>
       <form>
-        <textarea></textarea>
+        <TextArea text={text} setText={setText}/>
       </form>
     </section>
   )
 }
 
-function Preview(props) {
-  return (
-    <section id="preview">
-      <header>
-        <p>Preview</p>
-      </header>
-      <article>
+function Preview({text}) {
+  const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+  });
+  const markedText = md.render(text);
 
+  return (
+    <section id='preview'>
+      <header>
+        <small>Preview</small>
+      </header>
+      <article dangerouslySetInnerHTML={{__html: markedText}} >
       </article>
+      <footer>
+        Example text parsed with&#8194;
+        <a
+          href="https://github.com/markdown-it/markdown-it"
+          title="MarkdownIt">
+            MarkdownIt
+        </a>
+      </footer>
     </section>
   )
 }
 
 function App() {
+  // State
+  const initialState = exampleText;
+  const [text, setText] = useState(initialState);
+
   return (
     <React.Fragment>
-      <Editor />
-      <Preview />
+      <Editor icons={icons} text={text} setText={setText}/>
+      <Preview text={text}/>
     </React.Fragment>
   );
 }
