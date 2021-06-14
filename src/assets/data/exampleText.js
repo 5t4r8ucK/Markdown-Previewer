@@ -66,7 +66,7 @@ _This is also italic text_
 
 This is how blockquotes will display:
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae dui in velit bibendum aliquet nec vitae ex. Vivamus tincidunt porttitor est a lacinia.
+> Vivamus elit nibh, tristique eu pretium eget, tincidunt eget nibh. Fusce pellentesque nulla at luctus aliquam. Ut congue viverra dolor, at faucibus ante placerat sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 ---
 
@@ -91,6 +91,11 @@ This is how ordered lists look like:
 1. You can use sequential numbers...
 1. ...or keep all the numbers as \`1.\`
 
+Start numbering with offset:
+
+157. foo
+1. bar
+
 ---
 
 ## 7. Code
@@ -103,7 +108,7 @@ line 1 of code
 line 2 of code
 line 3 of code
 \`\`\`
-You can display the programming language like this:
+Using [highlight.js](https://highlightjs.org/) You can display the programming language and syntax highlighting like this:
 \`\`\` js
 var foo = function (bar) {
   return bar++;
@@ -140,24 +145,116 @@ A table with right aligned columns:
 
 [This is a link with a title](http://nodeca.github.io/pica/demo/ "title text!")
 
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+
 ---
 
 ## 10. Images
 
-A gif image:
+A GIF image:
+
+*[GIF]: Graphics Interchange Format
 
 ![Daftpunktocat-Guy](https://octodex.github.com/images/daftpunktocat-guy.gif)
 
-A jpeg image with a title:
+A JPG image with a title:
+
+*[JPG]: Joint Photographic Experts Group
 
 ![Octocat De Los Muertos](https://octodex.github.com/images/octocat-de-los-muertos.jpg "Octocat De Los Muertos")
 
-Like links, Images also have a footnote style syntax
+Like links, images also have a footnote style syntax
 
 ![Alt text][id]
 
-With a reference later in the document defining the URL location:
+With a reference later in the document defining the URL location.
 
-[id]: https://octodex.github.com/images/yaktocat.png  "Yaktocat"`;
+[id]: https://octodex.github.com/images/yaktocat.png  "Yaktocat"
+
+---
+
+## 11. Plugins
+
+The killer feature of \`markdown-it\` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+
+
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum: Shortcuts (emoticons): :-) :-( 8-) ;)
+
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+
+
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+### [Inserted Text](https://github.com/markdown-it/markdown-it-ins)
+
+++Inserted text++
+
+### [Marked Text](https://github.com/markdown-it/markdown-it-mark)
+
+==Marked text==
+
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+:   Definition 1
+with lazy continuation.
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+Compact style:
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+here be dragons
+:::
+
+`;
 
 export default exampleText;
