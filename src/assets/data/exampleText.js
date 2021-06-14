@@ -136,9 +136,9 @@ A table with right aligned columns:
 
 ## 9. Links
 
-[link text](http://dev.nodeca.com)
+[This is what linked text looks like](http://dev.nodeca.com)
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+[This is a link with a title](http://nodeca.github.io/pica/demo/ "title text!")
 
 ---
 
