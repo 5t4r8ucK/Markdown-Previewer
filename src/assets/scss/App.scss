@@ -151,6 +151,24 @@ section {
       // Other
     }
   }
+
+  footer {
+    // Positioning
+    // Display and Box Model
+    background-color: $black-5;
+    border-radius: 0 0 $border-radius $border-radius;
+    padding: calc(#{$gap-width} / 2);
+    // Typography
+    color: $black-70;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-stack-sans-serif;
+    // Other
+  }
 }
 
 #editor {
