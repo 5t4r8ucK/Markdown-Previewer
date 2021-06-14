@@ -14,6 +14,7 @@ import highlightJs from 'highlight.js';
 // Data
 import icons from './assets/data/icons.js';
 import exampleText from './assets/data/exampleText.js';
+// CSS
 import './assets/css/App.css';
 
 const TextArea = ({text, setText}) => {
