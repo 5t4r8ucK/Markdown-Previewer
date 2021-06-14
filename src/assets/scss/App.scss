@@ -127,6 +127,133 @@ section {
     // Typography
     // Other
 
+    a {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
+      color: $highlight-80;
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $highlight-100;
+        text-decoration: underline;
+        /* Other */
+        cursor: pointer;
+      }
+    }
+
+    abbr {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
+      font-feature-settings: "c2sc" 1, "onum" 1;
+      font-style: normal;
+      font-variant: small-caps;
+      letter-spacing: 0.05em;
+      /* Other */
+      cursor: pointer;
+    }
+
+    blockquote {
+      // Positioning
+      // Display and Box model
+      margin-bottom: 1.75rem;
+      padding: 0 calc(#{$gap-width} * 2);
+      // Typography
+      align-items: baseline;
+      font-family: $font-stack-serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.75rem;
+      quotes: "“" "”" "‘" "’";
+      text-indent: -0.30em;
+      // Other
+
+      @supports ( hanging-punctuation: first) {
+        // Positioning
+        // Display and Box model
+        // Typography
+        text-indent: 0;
+        hanging-punctuation: first;
+        /* Other */
+      }
+
+      &::after {
+        // Positioning
+        // Display and Box model
+        display: inline-block;
+        padding-left: 0.45em;
+        // Typography
+        // Other
+        content: close-quote;
+      }
+
+      &::before {
+        // Positioning
+        // Display and Box model
+        display: inline-block;
+        padding-right: 0.20em;
+        // Typography
+        // Other
+        content: open-quote;
+      }
+
+      p {
+        // Positioning
+        // Display and Box model
+        // Typography
+        display: inline;
+        margin: 0;
+        /* Other */
+
+        code {
+        /* Positioning */
+        /* Display and Box model */
+        display: inline;
+        /* Typography */
+        /* Other */
+        }
+      }
+    }
+
+    code {
+      /* Positioning */
+      /* Display and Box model */
+      background: $black-5;
+      border-color: $black-20;
+      border-radius: $border-radius;
+      border-style: solid;
+      border-width: $border-width;
+      padding: 0.3125rem; // line height - font size - (2x border width) = top + bottom padding (5px)
+      /* Typography */
+      color: $code;
+      font-family: $font-stack-monospace;
+      font-size: 0.8rem;
+      //font-size-adjust: 0.457;
+      /* Other */
+    }
+
+    dl {
+      dt {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        font-style: italic;
+        font-weight: 700;
+        /* Other */
+      }
+      dd {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        font-style: normal;
+        /* Other */
+      }
+    }
+
     h2:first-child {
       // Positioning
       // Display and Box Model
@@ -151,6 +278,275 @@ section {
       // Typography
       // Other
     }
+
+    ins {
+      // Positioning
+      // Display and Box Model
+      background: $ins;
+      display: inline-block;
+      padding: 0 0.3125rem;
+      // Typography
+      text-decoration: none;
+      // Other
+
+      &:before {
+      // Positioning
+      // Display and Box Model
+      margin-right: .3125rem;
+      // Typography
+      // Other
+        content: "+";
+      }
+    }
+
+    mark {
+      // Positioning
+      // Display and Box Model
+      background: $mark;
+      display: inline-block;
+      padding: 0 0.3125rem;
+      // Typography
+      text-decoration: none;
+      // Other
+    }
+
+    ol {
+      /* Positioning */
+      /* Display and Box model */
+      padding: 0 calc(#{$gap-width} * 2);
+      margin-bottom: 1.75rem;
+      /* Typography */
+      /* Other */
+
+      &:last-child,
+      &:only-child {
+        /* Positioning */
+        /* Display and Box model */
+        margin-bottom: 0;
+        /* Typography */
+        /* Other */
+      }
+
+      p {
+        /* Positioning */
+        /* Display and Box model */
+        margin-bottom: 0;
+        /* Typography */
+        /* Other */
+      }
+    }
+
+    pre {
+      /* Positioning */
+      /* Display and Box model */
+      padding: 0;
+      margin: 0 0 1.75rem 0;
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+      code {
+        /* Positioning */
+        /* Display and Box model */
+        display: block;
+        overflow-x: auto;
+        overflow-wrap: normal;
+        padding: calc(#{$gap-width} / 2);
+        /* Typography */
+        line-height: 1.75rem;
+        /* Other */
+
+        &[class]::before {
+          /* Positioning */
+          /* Display and Box model */
+          background: $black-20;
+          display: flex;
+          height: 1.75rem;
+          margin: calc(#{$gap-width} * (-0.5)) calc(#{$gap-width} * (-0.5)) 0 calc(#{$gap-width} * (-0.5));
+          padding: 0 calc(#{$gap-width} * (0.5));
+          /* Typography */
+          color: $black-70;
+          font-family: $font-stack-sans-serif;
+          font-size: 0.8rem;
+          font-style: normal;
+          font-variant: small-caps;
+          letter-spacing: 0.05em;
+          line-height: 1.75rem;
+          /* Other */
+          content: attr(class);
+        }
+
+        .hljs-keyword, .hljs-selector-tag, .hljs-subst {
+          font-weight: 600;
+        }
+
+        .hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr {
+          color: #0086b3;
+        }
+      }
+    }
+
+    section {
+      /* Positioning */
+      /* Display and Box model */
+      border: none;
+      /* Typography */
+      /* Other */
+    }
+
+    table {
+      /* Positioning */
+      /* Display and Box model */
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 1.75rem;
+      width: 100%;
+      /* Typography */
+      /* Other */
+
+      thead {
+        /* Positioning */
+        /* Display and Box model */
+        height: 1.75rem;
+        /* Typography */
+        color: $black-70;
+        /* Other */
+
+        tr {
+          &:first-child {
+            th {
+              &:first-child {
+                /* Positioning */
+                /* Display and Box model */
+                border-top-left-radius: $border-radius;
+                /* Typography */
+                /* Other */
+              }
+
+              &:last-child {
+                /* Positioning */
+                /* Display and Box model */
+                border-top-right-radius: $border-radius;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          th {
+            /* Positioning */
+            /* Display and Box model */
+            background-color: $black-20;
+            border-top: 0 solid $black-20;
+            border-right: 0 solid $black-20;
+            border-bottom: 0 solid $black-20;
+            padding: 0 calc(#{$gap-width} / 2);
+            /* Typography */
+            color: $black-70;
+            font-family: $font-stack-sans-serif;
+            font-size: 0.8rem;
+            font-style: normal;
+            font-variant: small-caps;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.75rem;
+            /* Other */
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:last-child {
+            td {
+              &:first-child {
+                /* Positioning */
+                /* Display and Box model */
+                border-bottom-left-radius: $border-radius;
+                /* Typography */
+                /* Other */
+              }
+
+              &:last-child {
+                /* Positioning */
+                /* Display and Box model */
+                border-bottom-right-radius: $border-radius;
+                /* Typography */
+                /* Other */
+              }
+            }
+          }
+
+          td {
+            /* Positioning */
+            /* Display and Box model */
+            border-right: $border-width solid $black-20;
+            border-bottom: $border-width solid $black-20;
+            padding: calc(#{$gap-width} / 2 - #{$border-width}) calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) calc(#{$gap-width} / 2);
+            /* Typography */
+            /* Other */
+
+            &:first-child {
+              /* Positioning */
+              /* Display and Box model */
+              border-left: $border-width solid $black-20;
+              /* Typography */
+              /* Other */
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      /* Positioning */
+      /* Display and Box model */
+      padding: 0 calc(#{$gap-width} * 2);
+      margin-bottom: 1.75rem;
+      /* Typography */
+      /* Other */
+
+      ul {
+        /* Positioning */
+        /* Display and Box model */
+        margin-bottom: 0;
+        /* Typography */
+        /* Other */
+      }
+    }
+
+    .footnotes {
+      /* Positioning */
+      /* Display and Box model */
+      column-count: 2;
+      /* Typography */
+      /* Other */
+
+      ol {
+        /* Positioning */
+        /* Display and Box model */
+        padding: 0 $gap-width;
+        /* Typography */
+        /* Other */
+      }
+    }
+
+    .warning {
+      /* Positioning */
+      /* Display and Box model */
+      background-color: $warning;
+      padding: 0.3125rem; // line height - font size - (2x border width) = top + bottom padding (5px)
+      /* Typography */
+      /* Other */
+
+      p {
+        /* Positioning */
+        /* Display and Box model */
+        margin: 0;
+        /* Typography */
+        /* Other */
+      }
+    }
   }
 
   footer {
@@ -162,13 +558,31 @@ section {
     // Typography
     color: $black-70;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-align: center;
     text-transform: uppercase;
     text-align: center;
     font-family: $font-stack-sans-serif;
     // Other
+
+    a {
+      /* Positioning */
+      /* Display and Box model */
+      /* Typography */
+      color: $highlight-80;
+      /* Other */
+
+      &:hover {
+        /* Positioning */
+        /* Display and Box model */
+        /* Typography */
+        color: $highlight-100;
+        text-decoration: underline;
+        /* Other */
+        cursor: pointer;
+      }
+    }
   }
 }
 

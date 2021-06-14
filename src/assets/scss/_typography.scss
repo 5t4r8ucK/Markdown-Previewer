@@ -18,24 +18,6 @@ html {
   font-size: 100%;
   // Other
 
-  a {
-    /* Positioning */
-    /* Display and Box model */
-    /* Typography */
-    color: $highlight-80;
-    /* Other */
-
-    &:hover {
-      /* Positioning */
-      /* Display and Box model */
-      /* Typography */
-      color: $highlight-100;
-      text-decoration: underline;
-      /* Other */
-      cursor: pointer;
-    }
-  }
-
   body {
     // Positioning
     // Display and Box model
@@ -46,79 +28,6 @@ html {
     line-height: 1.75;
     text-rendering: optimizelegibility;
     // Other
-  }
-
-  blockquote {
-    // Positioning
-    // Display and Box model
-    // Typography
-    align-items: baseline;
-    font-family: $font-stack-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.75rem;
-    margin-bottom: 1.75rem;
-    padding: 0 calc(#{$gap-width} * 2);
-    quotes: "“" "”" "‘" "’";
-    text-indent: -0.30em;
-    // Other
-
-    &::after {
-      // Positioning
-      position: absolute;
-      // Display and Box model
-      display: inline-block;
-      padding-left: 0.45em;
-      // Typography
-      // Other
-      content: close-quote;
-    }
-
-    &::before {
-      content: open-quote;
-      display: inline-block;
-      padding-right:  0.20em;
-    }
-
-    p {
-      // Positioning
-      // Display and Box model
-      // Typography
-      display: inline;
-      margin: 0;
-      /* Other */
-
-      code {
-      /* Positioning */
-      /* Display and Box model */
-      display: inline;
-      /* Typography */
-      /* Other */
-      }
-    }
-  }
-  @supports ( hanging-punctuation: first) {
-    blockquote {
-      text-indent: 0;
-      hanging-punctuation: first;
-    }
-  }
-
-  code {
-    /* Positioning */
-    /* Display and Box model */
-    background: $black-5;
-    border-color: $black-20;
-    border-radius: $border-radius;
-    border-style: solid;
-    border-width: $border-width;
-    padding: 0.3125rem;
-    /* Typography */
-    color: $code;
-    font-family: $font-stack-monospace;
-    font-size: 0.8rem;
-    //font-size-adjust: 0.457;
-    /* Other */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -182,23 +91,6 @@ html {
     /* Other */
   }
 
-  ol {
-    /* Positioning */
-    /* Display and Box model */
-    padding: 0 calc(#{$gap-width} * 2);
-    margin-bottom: 1.75rem;
-    /* Typography */
-    /* Other */
-
-    p {
-      /* Positioning */
-      /* Display and Box model */
-      margin-bottom: 0;
-      /* Typography */
-      /* Other */
-    }
-  }
-
   p {
     // Positioning
     // Display and Box model
@@ -208,123 +100,11 @@ html {
     // Other
   }
 
-  pre {
-    /* Positioning */
-    /* Display and Box model */
-    padding: 0;
-    margin: 0 0 1.75rem 0;
-    width: 100%;
-    /* Typography */
-    /* Other */
-
-    code {
-      /* Positioning */
-      /* Display and Box model */
-      display: block;
-      overflow-x: auto;
-      overflow-wrap: normal;
-      padding: calc(#{$gap-width} / 2);
-      /* Typography */
-      line-height: 1.75rem;
-      /* Other */
-
-      &[class]::before {
-        /* Positioning */
-        /* Display and Box model */
-        background: $black-20;
-        content: attr(class);
-        display: flex;
-        height: 1.75rem;
-        margin: calc(#{$gap-width} * (-0.5)) calc(#{$gap-width} * (-0.5)) 0 calc(#{$gap-width} * (-0.5));
-        padding: 0 calc(#{$gap-width} * (0.5));
-        /* Typography */
-        color: $black-70;
-        font-family: $font-stack-sans-serif;
-        font-size: 0.8rem;
-        font-style: normal;
-        font-variant: small-caps;
-        letter-spacing: 0.05em;
-        line-height: 1.75rem;
-        /* Other */
-      }
-    }
-  }
-
   small, .text_small {
     /* Positioning */
     /* Display and Box model */
     /* Typography */
     font-size: 0.8rem;
     /* Other */
-  }
-
-  table {
-    /* Positioning */
-    /* Display and Box model */
-    border-collapse: collapse;
-    margin-bottom: 1.75rem;
-    /* Typography */
-    /* Other */
-
-    thead {
-      /* Positioning */
-      /* Display and Box model */
-      background: $black-20;
-      height: 1.75rem;
-      /* Typography */
-      color: $black-70;
-      /* Other */
-
-      tr {
-
-        th {
-          /* Positioning */
-          /* Display and Box model */
-          padding: 0 calc(#{$gap-width} / 2);
-          /* Typography */
-          color: $black-70;
-          font-family: $font-stack-sans-serif;
-          font-size: 0.8rem;
-          font-style: normal;
-          font-variant: small-caps;
-          font-weight: 400;
-          letter-spacing: 0.05em;
-          line-height: 1.75rem;
-          /* Other */
-        }
-      }
-    }
-
-    tbody {
-      tr {
-        td {
-          /* Positioning */
-          /* Display and Box model */
-          border-color: $black-20;
-          border-style: solid;
-          border-width: $border-width;
-          padding: calc(#{$gap-width} / 2 - #{$border-width}) calc(#{$gap-width} / 2) calc(#{$gap-width} / 2) calc(#{$gap-width} / 2);
-          /* Typography */
-          /* Other */
-        }
-      }
-    }
-  }
-
-  ul {
-    /* Positioning */
-    /* Display and Box model */
-    padding: 0 calc(#{$gap-width} * 2);
-    margin-bottom: 1.75rem;
-    /* Typography */
-    /* Other */
-
-    ul {
-      /* Positioning */
-      /* Display and Box model */
-      margin-bottom: 0;
-      /* Typography */
-      /* Other */
-    }
   }
 }
