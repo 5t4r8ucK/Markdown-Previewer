@@ -118,6 +118,39 @@ section {
       }
     }
   }
+
+  article {
+    // Positioning
+    // Display and Box Model
+    padding: $gap-width;
+    // Typography
+    // Other
+
+    h2:first-child {
+      // Positioning
+      // Display and Box Model
+      margin-top: 0;
+      // Typography
+      // Other
+    }
+
+    hr {
+      // Positioning
+      // Display and Box Model
+      border-top: $border-width solid $black-20;
+      margin: $gap-width 0;
+      // Typography
+      // Other
+    }
+
+    img {
+      // Positioning
+      // Display and Box Model
+      max-width: 33%;
+      // Typography
+      // Other
+    }
+  }
 }
 
 #editor {
