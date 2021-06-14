@@ -40,7 +40,3 @@ Once you're done, submit the URL to your working project with all its tests pass
 + The example text used is a modified version of the example text from Markdown It demo: https://markdown-it.github.io/
 + The parser used for this project is [Markdown It](https://github.com/markdown-it/markdown-it).
 + Images used are from [Octodex](https://octodex.github.com/).
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
