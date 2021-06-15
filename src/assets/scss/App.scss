@@ -160,53 +160,22 @@ section {
     blockquote {
       // Positioning
       // Display and Box model
+      border-left: 5px solid $black-10;
       margin-bottom: 1.75rem;
-      padding: 0 calc(#{$gap-width} * 2);
+      padding: 0 $gap-width;
       // Typography
       align-items: baseline;
       font-family: $font-stack-serif;
       font-size: 1.25rem;
       font-weight: 400;
       line-height: 1.75rem;
-      quotes: "“" "”" "‘" "’";
-      text-indent: -0.30em;
       // Other
-
-      @supports ( hanging-punctuation: first) {
-        // Positioning
-        // Display and Box model
-        // Typography
-        text-indent: 0;
-        hanging-punctuation: first;
-        /* Other */
-      }
-
-      &::after {
-        // Positioning
-        // Display and Box model
-        display: inline-block;
-        padding-left: 0.45em;
-        // Typography
-        // Other
-        content: close-quote;
-      }
-
-      &::before {
-        // Positioning
-        // Display and Box model
-        display: inline-block;
-        padding-right: 0.20em;
-        // Typography
-        // Other
-        content: open-quote;
-      }
 
       p {
         // Positioning
         // Display and Box model
         // Typography
-        display: inline;
-        margin: 0;
+        margin: 0 0 calc(#{$gap-width} / 2) 0;
         /* Other */
 
         code {

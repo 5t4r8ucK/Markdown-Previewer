@@ -66,8 +66,9 @@ _This is also italic text_
 
 This is how blockquotes will display:
 
-> Vivamus elit nibh, tristique eu pretium eget, tincidunt eget nibh. Fusce pellentesque nulla at luctus aliquam. Ut congue viverra dolor, at faucibus ante placerat sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between the arrows.
 ---
 
 ## 6. Lists
