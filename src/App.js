@@ -104,8 +104,8 @@ function Preview({text}) {
       <footer>
         Example text parsed with&#8194;
         <a
-          href="https://github.com/markdown-it/markdown-it"
-          title="MarkdownIt">
+          href='https://github.com/markdown-it/markdown-it'
+          title='MarkdownIt'>
             MarkdownIt
         </a>
       </footer>
