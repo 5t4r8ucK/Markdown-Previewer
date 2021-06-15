@@ -23,6 +23,7 @@ const TextArea = ({text, setText}) => {
   )
   return (
     <textarea
+      id='editor'
       value={text}
       onChange={handleChange}>
     </textarea>
@@ -69,7 +70,8 @@ function Preview({text}) {
   const md = new MarkdownIt({
     html: true,
     linkify: true,
-    typographer: true,
+    typographer: false,
+    breaks: true,
     highlight: function (str, lang) {
       if (lang && highlightJs.getLanguage(lang)) {
         try {
@@ -95,7 +97,9 @@ function Preview({text}) {
       <header>
         <small>Preview</small>
       </header>
-      <article dangerouslySetInnerHTML={{__html: markedText}} >
+      <article
+        id='preview'
+        dangerouslySetInnerHTML={{__html: markedText}} >
       </article>
       <footer>
         Example text parsed with&#8194;
