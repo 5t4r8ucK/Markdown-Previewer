@@ -229,7 +229,7 @@ section {
       border-width: $border-width;
       padding: 0.3125rem; // line height - font size - (2x border width) = top + bottom padding (5px)
       /* Typography */
-      color: $code;
+      color: $code-100;
       font-family: $font-stack-monospace;
       font-size: 0.8rem;
       //font-size-adjust: 0.457;
@@ -537,6 +537,7 @@ section {
       background-color: $warning;
       padding: 0.3125rem; // line height - font size - (2x border width) = top + bottom padding (5px)
       /* Typography */
+      color: $code-100;
       /* Other */
 
       p {
