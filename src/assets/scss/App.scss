@@ -12,6 +12,24 @@ section {
   // Typography
   // Other
 
+  &#editor-container {
+    // Positioning
+    // Display and Box Model
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    // Typography
+    // Other
+  }
+
+  &#preview-container {
+    // Positioning
+    // Display and Box Model
+    display: grid;
+    grid-template-rows: auto 1fr;
+    // Typography
+    // Other
+  }
+
   header {
     // Positioning
     // Display and Box Model
@@ -570,22 +588,4 @@ section {
       }
     }
   }
-}
-
-#editor {
-  // Positioning
-  // Display and Box Model
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  // Typography
-  // Other
-}
-
-#preview {
-  // Positioning
-  // Display and Box Model
-  display: grid;
-  grid-template-rows: auto 1fr;
-  // Typography
-  // Other
 }

@@ -51,7 +51,7 @@ function Editor({icons, text, setText}) {
   });
 
   return (
-    <section id='editor'>
+    <section id='editor-container'>
       <header>
         <small>Editor</small>
       </header>
@@ -91,7 +91,7 @@ function Preview({text}) {
   const markedText = md.render(text);
 
   return (
-    <section id='preview'>
+    <section id='preview-container'>
       <header>
         <small>Preview</small>
       </header>
