@@ -531,18 +531,34 @@ section {
       }
     }
 
-    .warning {
+    .error {
       /* Positioning */
       /* Display and Box model */
-      background-color: $warning;
-      padding: 0.3125rem; // line height - font size - (2x border width) = top + bottom padding (5px)
+      display: flex; // workaround the extra whitespace created by inline elements
+      background-color: $code-40;
+      border-radius: $border-radius;
+      padding: calc(#{$gap-width} / 2);
       /* Typography */
       color: $code-100;
       /* Other */
 
+      &:before {
+        /* Positioning */
+        /* Display and Box model */
+        padding: 0 0.3125rem;
+        margin-right: 0.3125rem;
+        /* Typography */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        text-align: center;
+        /* Other */
+        content: "\f06a"
+      }
+
       p {
         /* Positioning */
         /* Display and Box model */
+        display: inline-block;
         margin: 0;
         /* Typography */
         /* Other */

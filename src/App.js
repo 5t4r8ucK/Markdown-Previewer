@@ -87,7 +87,7 @@ function Preview({text}) {
     .use(markdownitFootnote)
     .use(markdownitAbbr)
     .use(markdownitDeflist)
-    .use(markdownitContainer, 'warning');
+    .use(markdownitContainer, 'error');
   const markedText = md.render(text);
 
   return (
