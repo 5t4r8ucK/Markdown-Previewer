@@ -1,7 +1,7 @@
 const exampleText =
 `## 1. Title Headings
 
-This is what headings look like:
+This is what headings will look like:
 
 # H1 Heading
 ## H2 Heading
@@ -38,7 +38,7 @@ test.. test... test..... test?..... test!....
 
 ## 3. Blocks of text
 
-This is what a couple of paragraphs look like:
+This is what a couple of paragraphs will look like:
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae dui in velit bibendum aliquet nec vitae ex. Vivamus tincidunt porttitor est a lacinia. Nulla finibus tortor at nibh efficitur aliquam. Quisque tincidunt pharetra fermentum. Suspendisse et est eget dolor molestie tristique quis quis ex. Aenean ultricies sapien vel mi laoreet finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
@@ -73,7 +73,7 @@ This is how blockquotes will display:
 
 ## 6. Lists
 
-This is how unordered lists look like:
+This is how unordered lists will look like:
 
 + Create a list by starting a line with \`+\`, \`-\`, or \`*\`
 + Sub-lists are made by indenting 2 spaces:
@@ -92,7 +92,7 @@ This is how ordered lists look like:
 1. You can use sequential numbers...
 1. ...or keep all the numbers as \`1.\`
 
-Start numbering with offset:
+You can also start numbering with an offset:
 
 157. foo
 1. bar
@@ -109,7 +109,7 @@ line 1 of code
 line 2 of code
 line 3 of code
 \`\`\`
-Using [highlight.js](https://highlightjs.org/) You can display the programming language and syntax highlighting like this:
+Using [highlight.js](https://highlightjs.org/) You can display the programming language with syntax highlighting like this:
 \`\`\` js
 var foo = function (bar) {
   return bar++;
@@ -176,13 +176,15 @@ With a reference later in the document defining the URL location.
 
 ## 11. Plugins
 
-The killer feature of \`markdown-it\` is very effective support of
+The killer feature of \`markdown-it\` is its very effective support of
 [syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
 
 ### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
 
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum: Shortcuts (emoticons): :-) :-( 8-) ;)
+> Classic markup: :wink: :heart_eyes: :cry: :sob: :laughing: :yum:
+
+> Shortcuts (emoticons): :-) :-( 8-) ;)
 
 see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
