@@ -1,6 +1,6 @@
 {
   "short_name": "Markdown Previewer",
-  "name": "Previews Markdown using Markitdown in React",
+  "name": "A Markdown Previewer Built With React",
   "icons": [
     {
       "src": "/favicons/favicon.ico",
