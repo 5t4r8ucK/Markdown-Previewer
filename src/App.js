@@ -10,7 +10,7 @@ import markdownitFootnote from 'markdown-it-footnote';
 import markdownitAbbr from 'markdown-it-abbr';
 import markdownitDeflist from 'markdown-it-deflist';
 import markdownitContainer from 'markdown-it-container';
-import highlightJs from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
 // Data
 import icons from './assets/data/icons.js';
 import exampleText from './assets/data/exampleText.js';
@@ -73,9 +73,9 @@ function Preview({text}) {
     typographer: false,
     breaks: true,
     highlight: function (str, lang) {
-      if (lang && highlightJs.getLanguage(lang)) {
+      if (lang && hljs.getLanguage(lang)) {
         try {
-          return highlightJs.highlight(str, { language: lang }).value;
+          return hljs.highlight(str, { language: lang }).value;
         } catch (__) {}
       }
       return '';
